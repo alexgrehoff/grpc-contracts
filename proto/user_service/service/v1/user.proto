@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package user_service.service.v1;
+
+option go_package = "github.com/ReaperIo/grpc-contracts/gen/go/user_service/service/v1;pb_user_service";
+
+message User {
+  string id = 1;
+  // Account Type
+  string account_type = 2;
+  // Phone Number
+  string phone_number = 3;
+  // Email
+  string email = 4;
+  // Created At
+  string created_at = 5;
+  // Updated At
+  string updated_at = 6;
+  // Locked To
+  string locked_to = 7;
+  // Locked Comment
+  string locked_comment = 8;
+  // Is Locked
+  bool is_locked = 9;
+  // Is Admin
+  bool is_admin = 10;
+  // Is Active
+  bool is_active = 11;
+}

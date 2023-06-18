@@ -1,0 +1,116 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "user_service/service/v1/service.proto",
+    "version": "version not set"
+  },
+  "tags": [
+    {
+      "name": "UserService"
+    }
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {},
+  "definitions": {
+    "protobufAny": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": {}
+    },
+    "rpcStatus": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/protobufAny"
+          }
+        }
+      }
+    },
+    "v1GetUsersResponse": {
+      "type": "object",
+      "properties": {
+        "users": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/v1User"
+          }
+        }
+      }
+    },
+    "v1UpdateUserResponse": {
+      "type": "object",
+      "properties": {
+        "user": {
+          "$ref": "#/definitions/v1User"
+        }
+      },
+      "description": "Response for update user."
+    },
+    "v1User": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "accountType": {
+          "type": "string",
+          "title": "Account Type"
+        },
+        "phoneNumber": {
+          "type": "string",
+          "title": "Phone Number"
+        },
+        "email": {
+          "type": "string",
+          "title": "Email"
+        },
+        "createdAt": {
+          "type": "string",
+          "title": "Created At"
+        },
+        "updatedAt": {
+          "type": "string",
+          "title": "Updated At"
+        },
+        "lockedTo": {
+          "type": "string",
+          "title": "Locked To"
+        },
+        "lockedComment": {
+          "type": "string",
+          "title": "Locked Comment"
+        },
+        "isLocked": {
+          "type": "boolean",
+          "title": "Is Locked"
+        },
+        "isAdmin": {
+          "type": "boolean",
+          "title": "Is Admin"
+        },
+        "isActive": {
+          "type": "boolean",
+          "title": "Is Active"
+        }
+      }
+    }
+  }
+}

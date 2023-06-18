@@ -1,0 +1,63 @@
+syntax = "proto3";
+
+package user_service.service.v1;
+
+option go_package = "github.com/ReaperIo/grpc-contracts/gen/go/user_service/service/v1;pb_user_service";
+
+import "user_service/service/v1/user.proto";
+
+service UserService {
+  rpc GetUsers(GetUsersRequest) returns (GetUsersResponse) {}
+  rpc UpdateUser(UpdateUserRequest) returns (UpdateUserResponse) {}
+}
+
+message GetUsersRequest {
+  optional string name = 1;
+  // Email
+  optional string email = 2;
+  // Account Type
+  optional string account_type = 3;
+  // Phone Number
+  optional string phone_number = 4 [deprecated = true];
+  // Is Locked
+  optional bool is_locked = 5;
+  // Is Active
+  optional bool is_active = 6;
+  // Is Admin
+  optional bool is_admin = 7;
+}
+
+message GetUsersResponse {
+  repeated User users = 1;
+}
+
+// Request for update user.
+message UpdateUserRequest {
+  // ID
+  string id = 1; // mapped to URL
+  // Account Type
+  optional string account_type = 2; // mapped to body
+  // Phone Number
+  optional string phone_number = 3; // mapped to body
+  // Email
+  optional string email = 4; // mapped to body
+  // Created At
+  optional string created_at = 5; // mapped to body
+  // Updated At
+  optional string updated_at = 6; // mapped to body
+  // Locked To
+  optional string locked_to = 7; // mapped to body
+  // Locked Comment
+  optional string locked_comment = 8; // mapped to body
+  // Is Locked
+  optional bool is_locked = 9; // mapped to body
+  // Is Admin
+  optional bool is_admin = 10; // mapped to body
+  // Is Active
+  optional bool is_active = 11; // mapped to body
+}
+
+// Response for update user.
+message UpdateUserResponse {
+  User user = 1;
+}
