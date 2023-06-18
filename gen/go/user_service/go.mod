@@ -1,4 +1,4 @@
-module github.com/ReaperIo/grpc-contracts/gen/go/user_service
+module github.com/alexgrehoff/grpc-contracts/gen/go/user_service
 
 go 1.20
 

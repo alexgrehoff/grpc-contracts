@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package user_service.service.v1;
 
-option go_package = "github.com/ReaperIo/grpc-contracts/gen/go/user_service/service/v1;pb_user_service";
+option go_package = "github.com/alexgrehoff/grpc-contracts/gen/go/user_service/service/v1;pb_user_service";
 
 message User {
   string id = 1;

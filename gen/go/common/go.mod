@@ -1,4 +1,4 @@
-module github.com/ReaperIo/grpc-contracts/gen/go/common
+module github.com/alexgrehoff/grpc-contracts/gen/go/common
 
 go 1.20
 

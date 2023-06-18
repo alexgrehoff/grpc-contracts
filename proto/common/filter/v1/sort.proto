@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package common.filter.v1;
 
-option go_package = "github.com/ReaperIo/grpc-contracts/gen/go/common/filter/v1;pb_common_filter";
+option go_package = "github.com/alexgrehoff/grpc-contracts/gen/go/common/filter/v1;pb_common_filter";
 
 // Sorting array
 message Sort {
